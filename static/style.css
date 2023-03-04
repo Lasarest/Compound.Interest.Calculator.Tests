@@ -1,0 +1,17 @@
+.content {
+float: left;
+display: block;
+width: 200px;
+margin: 0 auto
+}
+.content_2 {
+float: center;
+display: block;
+width: 200px;
+margin:0 auto
+}
+.all {
+    max-width: 500px;
+    margin: auto;
+    font-family: Gill Sans, sans-serif;
+}

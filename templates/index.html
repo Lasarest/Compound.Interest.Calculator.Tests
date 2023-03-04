@@ -1,0 +1,37 @@
+<!-- HTML Document -->
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello</title>
+</head>
+<body class="all">
+<h2>Калькулятор сложного процента</h2>
+    <div>
+        <div class="content">
+            <p>Размер вклада (руб.):</p>
+            <p>Срок вклада (г.):</p>
+            <p>Процентная ставка (%):</p>
+        </div>
+        <div class="content">
+            <form method="post" action="/add_number">
+                 <p><input name="deposit_amount" min="0"></p>
+                 <p><input name="deposit_term" min="0"></p>
+                 <p><input name="interest_rate" min="0"></p>
+                <button type="submit" >Рассчитать</button>
+            </form>
+        </div>
+    </div>
+    <div class="content_2">
+        <h3>Результат:</h3>
+        <!-- Output loop -->
+        {% for Message in messages %}
+        <div>{{ Message.amount }}</div>
+        {% endfor %}
+    </div>
+</body>
+</html>
